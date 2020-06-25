@@ -11,6 +11,7 @@
     "cronie": "./bin/cronie.js"
   },
   "dependencies": {
-    "node-cron": "^2.0.3"
+    "node-cron": "^2.0.3",
+    "yargs": "^15.3.1"
   }
 }
