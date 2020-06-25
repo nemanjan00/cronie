@@ -11,7 +11,7 @@ module.exports = (argv) => {
 	const time = argv.shift();
 
 	const command = argv;
-	const program = command.pop();
+	const program = command.shift();
 
 	cron.schedule(time, () => {
 		const shell = spawn(program, command);
