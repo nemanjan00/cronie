@@ -6,5 +6,11 @@
   "repository": "git@github.com:nemanjan00/cronie.git",
   "author": "nemanjan00 <nemanjan00@gmail.com>",
   "license": "UNLICENSED",
-  "private": false
+  "private": false,
+  "bin": {
+    "cronie": "./bin/cronie.js"
+  },
+  "dependencies": {
+    "node-cron": "^2.0.3"
+  }
 }
