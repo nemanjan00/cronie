@@ -28,6 +28,6 @@ cronie run "* * * * *" curl google.com
 Run `ping google.com` and restart it when time matches "\* \* \* \* \*"
 
 ```bash
-cronie run "* * * * *" ping google.com
+cronie restart "* * * * *" ping google.com
 ```
 
