@@ -13,6 +13,13 @@ module.exports = (argv) => {
 	const command = argv;
 	const program = command.shift();
 
+	const valid = cron.validate(time);
+
+	if(!valid) {
+		console.error(`Cron descriptor '${time}' is not valid... `);
+		process.exit(1);
+	}
+
 	cron.schedule(time, () => {
 		const shell = spawn(program, command);
 
