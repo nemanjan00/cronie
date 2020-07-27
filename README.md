@@ -19,7 +19,15 @@ npm global install cronie
 
 ## Usage
 
+Run `curl google.com` when time matches "\* \* \* \* \*"
+
 ```bash
 cronie run "* * * * *" curl google.com
+```
+
+Run `ping google.com` and restart it when time matches "\* \* \* \* \*"
+
+```bash
+cronie run "* * * * *" ping google.com
 ```
 
