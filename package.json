@@ -1,6 +1,6 @@
 {
   "name": "cronie",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Simple tool for running cronjobs without crond.",
   "main": "index.js",
   "repository": "git@github.com:nemanjan00/cronie.git",
