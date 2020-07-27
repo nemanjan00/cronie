@@ -34,6 +34,8 @@ module.exports = (...args) => {
 
 			const shell = spawn(command._program, command._argv);
 
+			command._shell = shell;
+
 			if(command._options.pipe) {
 				shell.stdout.pipe(process.stdout);
 
