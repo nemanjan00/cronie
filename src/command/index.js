@@ -22,7 +22,7 @@ module.exports = (...args) => {
 			Object.assign(command._options, options);
 
 			command._program = program;
-			command._arguments = argv;
+			command._argv = argv;
 
 			return command;
 		},
