@@ -30,6 +30,14 @@ module.exports = (argv) => {
 		if(code !== 0) {
 			console.error(`Command ${program} ${program_argv.join(" ")} exited with code ${code}`);
 		}
+
+		if(code != 0 && code != null) {
+			setTimeout(() => {
+				console.log("Restarting it after it crashed...");
+
+				proc.restart();
+			}, 1000);
+		}
 	});
 
 	proc.start();
