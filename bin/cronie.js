@@ -14,10 +14,14 @@ const argv = yargs
 
 let running = false;
 
-argv._.forEach(command => {
+process.argv.forEach(command => {
+	process.argv.shift();
+
 	if(commands[command] !== undefined && running == false) {
 		running = true;
-		commands[command](argv);
+		commands[command]({
+			_: JSON.parse(JSON.stringify(process.argv))
+		});
 	}
 });
 
